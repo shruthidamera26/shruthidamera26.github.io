@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shruthi Portfolio</title>
+
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- FONT AWESOME -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+<style>
+
+/* ===========================
+   GLOBAL
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#07111f;
+    color:white;
+    overflow-x:hidden;
+}
+
+.container{
+    width:90%;
+    max-width:1300px;
+    margin:auto;
+}
+
+section{
+    padding:90px 0;
+}
+
+h1,h2,h3,h4{
+    font-weight:700;
+}
+
+p{
+    line-height:1.8;
+    color:#cbd5e1;
+}
+
+a{
+    text-decoration:none;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.section-title h2{
+    font-size:42px;
+}
+
+.section-title span{
+    color:#00c3ff;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 35px;
+    border-radius:50px;
+    font-weight:600;
+    transition:0.4s;
+    margin:10px;
+}
+
+.btn-primary{
+    background:#00c3ff;
+    color:white;
+}
+
+.btn-primary:hover{
+    background:#009acb;
+    transform:translateY(-5px);
+}
+
+.btn-outline{
+    border:2px solid #00c3ff;
+    color:#00c3ff;
+}
+
+.btn-outline:hover{
+    background:#00c3ff;
+    color:white;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+nav{
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+    background:#020617;
+    padding:20px 0;
+    box-shadow:0 5px 20px rgba(0,0,0,0.4);
+}
+
+.nav-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:700;
+    color:#00c3ff;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav ul li a{
+    color:white;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#00c3ff;
+}
+
+/* ===========================
+   HERO SECTION
+=========================== */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    background:linear-gradient(to right,#020617,#0f172a);
+}
+
+.hero-content{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.hero-text h1{
+    font-size:65px;
+    line-height:1.2;
+}
+
+.hero-text span{
+    color:#00c3ff;
+}
+
+.hero-text h3{
+    font-size:30px;
+    color:#94a3b8;
+    margin:20px 0;
+}
+
+.hero-text p{
+    margin-bottom:30px;
+}
+
+.hero-image{
+    text-align:center;
+}
+
+.hero-image img{
+    width:380px;
+    height:380px;
+    border-radius:50%;
+    object-fit:cover;
+    border:8px solid #00c3ff;
+    box-shadow:0 0 50px rgba(0,195,255,0.5);
+}
+
+/* ===========================
+   ABOUT
+=========================== */
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.about-card{
+    background:#132033;
+    padding:40px;
+    border-radius:25px;
+    transition:0.4s;
+}
+
+.about-card:hover{
+    transform:translateY(-10px);
+}
+
+/* ===========================
+   SKILLS
+=========================== */
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.skill-card{
+    background:#132033;
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+    transition:0.4s;
+}
+
+.skill-card:hover{
+    transform:translateY(-10px);
+    background:#00c3ff;
+}
+
+.skill-card i{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+/* ===========================
+   EXPERIENCE
+=========================== */
+
+.timeline{
+    position:relative;
+}
+
+.timeline::before{
+    content:'';
+    position:absolute;
+    left:50%;
+    width:4px;
+    height:100%;
+    background:#00c3ff;
+    transform:translateX(-50%);
+}
+
+.timeline-item{
+    width:50%;
+    position:relative;
+    padding:20px 40px;
+}
+
+.timeline-item:nth-child(odd){
+    left:0;
+    text-align:right;
+}
+
+.timeline-item:nth-child(even){
+    left:50%;
+}
+
+.timeline-content{
+    background:#132033;
+    padding:30px;
+    border-radius:20px;
+}
+
+.timeline-content h3{
+    color:#00c3ff;
+    margin-bottom:10px;
+}
+
+/* ===========================
+   PROJECTS
+=========================== */
+
+.projects-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+}
+
+.project-card{
+    background:#132033;
+    border-radius:20px;
+    overflow:hidden;
+    transition:0.4s;
+}
+
+.project-card:hover{
+    transform:translateY(-10px);
+}
+
+.project-card img{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+}
+
+.project-content{
+    padding:25px;
+}
+
+.project-content h3{
+    margin-bottom:15px;
+}
+
+/* ===========================
+   STATS
+=========================== */
+
+.stats{
+    background:#132033;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.stat-card{
+    text-align:center;
+    padding:40px;
+}
+
+.stat-card h2{
+    font-size:55px;
+    color:#00c3ff;
+}
+
+/* ===========================
+   CONTACT
+=========================== */
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.contact-info,
+.contact-form{
+    background:#132033;
+    padding:40px;
+    border-radius:20px;
+}
+
+.contact-info p{
+    margin:20px 0;
+}
+
+.contact-info i{
+    color:#00c3ff;
+    margin-right:10px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:20px;
+    border:none;
+    border-radius:10px;
+    background:#1e293b;
+    color:white;
+}
+
+.contact-form button{
+    width:100%;
+    border:none;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+    background:#020617;
+    text-align:center;
+    padding:30px 0;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:991px){
+
+.hero-content,
+.about-grid,
+.contact-grid{
+    grid-template-columns:1fr;
+}
+
+.hero{
+    padding-top:140px;
+}
+
+.hero-text{
+    text-align:center;
+}
+
+.hero-text h1{
+    font-size:45px;
+}
+
+.hero-image img{
+    width:300px;
+    height:300px;
+}
+
+.timeline::before{
+    left:0;
+}
+
+.timeline-item{
+    width:100%;
+    left:0 !important;
+    text-align:left !important;
+    padding-left:40px;
+}
+
+nav ul{
+    display:none;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ===========================
+   NAVBAR
+=========================== -->
+
+<nav>
+
+<div class="container nav-container">
+
+<div class="logo">SHRUTHI</div>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#powerbi">Power BI</a></li>
+<li><a href="#excel">Excel</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</div>
+
+</nav>
+
+<!-- ===========================
+   HERO SECTION
+=========================== -->
+
+<section class="hero" id="home">
+
+<div class="container hero-content">
+
+<div class="hero-text">
+
+<h1>Hello, I'm <span>Shruthi</span></h1>
+
+<h3>Power BI & Excel Developer</h3>
+
+<p>
+Results-driven Power BI & Excel Developer with 9+ years of experience
+in Accounts Receivable, Accounts Payable,
+SAP Operations, Financial Reporting,
+Reconciliations, Dashboard Development,
+and Business Analytics.
+</p>
+
+<a href="shruthi_resume.pdf" target="_blank" class="btn btn-primary">
+<i class="fa-solid fa-eye"></i> View Resume
+</a>
+
+<a href="shruthi_resume.pdf" download class="btn btn-outline">
+<i class="fa-solid fa-download"></i> Download Resume
+</a>
+
+</div>
+
+<div class="hero-image">
+
+<!-- ADD YOUR IMAGE -->
+<img src="images/profile.jpg" alt="Profile">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+   ABOUT
+=========================== -->
+
+<section id="about">
+
+<div class="container">
+
+<div class="section-title">
+<h2>About <span>Me</span></h2>
+</div>
+
+<div class="about-grid">
+
+<div class="about-card">
+
+<h3>Professional Summary</h3>
+
+<p>
+Experienced Power BI & Excel Developer with expertise in
+Financial Reporting, SAP Operations,
+Accounts Reconciliation, Dashboard Development,
+Data Visualization, KPI Reporting,
+and Business Process Analytics.
+</p>
+
+</div>
+
+<div class="about-card">
+
+<h3>Achievements</h3>
+
+<p>
+✔ Best Team Player Award Winner<br><br>
+✔ Managed 37 Legal Entity Reconciliations<br><br>
+✔ Automated Financial Reporting Processes<br><br>
+✔ Improved Invoice Accuracy & Audits<br><br>
+✔ Developed Financial KPI Dashboards
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+   SKILLS
+=========================== -->
+
+<section id="skills">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Technical <span>Skills</span></h2>
+</div>
+
+<div class="skills-grid">
+
+<div class="skill-card">
+<i class="fa-solid fa-chart-simple"></i>
+<h3>Power BI</h3>
+<p>
+Dashboard Development,
+KPI Reporting,
+Data Visualization,
+Power Query
+</p>
+</div>
+
+<div class="skill-card">
+<i class="fa-solid fa-file-excel"></i>
+<h3>Advanced Excel</h3>
+<p>
+Pivot Tables,
+VLOOKUP,
+Dashboards,
+Financial Reports
+</p>
+</div>
+
+<div class="skill-card">
+<i class="fa-solid fa-database"></i>
+<h3>SAP & Tally</h3>
+<p>
+SAP Operations,
+Invoice Processing,
+Reconciliations,
+Finance Operations
+</p>
+</div>
+
+<div class="skill-card">
+<i class="fa-solid fa-chart-line"></i>
+<h3>Financial Analytics</h3>
+<p>
+Accounts Receivable,
+Accounts Payable,
+GL Reconciliation,
+MIS Reporting
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+   EXPERIENCE
+=========================== -->
+
+<section id="experience">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Work <span>Experience</span></h2>
+</div>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<div class="timeline-content">
+<h3>IFF – International Flavors & Fragrances Inc.</h3>
+<h4>Accounting Specialist</h4>
+<p>Apr 2021 - Present</p>
+<p>
+Handled invoice processing, reconciliations,
+month-end reporting, SAP operations,
+and financial reporting dashboards.
+</p>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-content">
+<h3>Performance Specialty Products Pvt. Ltd.</h3>
+<h4>Accounting Specialist</h4>
+<p>Apr 2019 - Mar 2020</p>
+<p>
+Managed invoice processing,
+vendor payments,
+audit validation,
+and payment reporting.
+</p>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-content">
+<h3>E.I. Dupont Private Limited</h3>
+<h4>Process Associate</h4>
+<p>Mar 2016 - Mar 2019</p>
+<p>
+Handled freight invoice processing,
+vendor support,
+SAP reports,
+and dashboard reporting.
+</p>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-content">
+<h3>Varmora (India) Limited</h3>
+<h4>Sales Coordinator</h4>
+<p>Jan 2015 - Jan 2016</p>
+<p>
+Managed sales activity reports,
+attendance reports,
+and customer payment follow-ups.
+</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+   POWER BI PROJECTS
+=========================== -->
+
+<section id="powerbi">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Power BI <span>Projects</span></h2>
+</div>
+
+<div class="projects-grid">
+
+<div class="project-card">
+<img src="images/powerbi1.jpg">
+<div class="project-content">
+<h3>Financial Reconciliation Dashboard</h3>
+<p>GL and sub-ledger reconciliation analytics.</p>
+</div>
+</div>
+
+<div class="project-card">
+<img src="images/powerbi2.jpg">
+<div class="project-content">
+<h3>Accounts Receivable Dashboard</h3>
+<p>Invoice aging and customer outstanding analytics.</p>
+</div>
+</div>
+
+<div class="project-card">
+<img src="images/powerbi3.jpg">
+<div class="project-content">
+<h3>Vendor Payment Dashboard</h3>
+<p>Vendor payment and release tracking dashboard.</p>
+</div>
+</div>
+
+<div class="project-card">
+<img src="images/powerbi4.jpg">
+<div class="project-content">
+<h3>Invoice Discrepancy Dashboard</h3>
+<p>Invoice mismatch and audit tracking analytics.</p>
+</div>
+</div>
+
+<div class="project-card">
+<img src="images/powerbi5.jpg">
+<div class="project-content">
+<h3>Month-End Closing Dashboard</h3>
+<p>Month-end reporting and reconciliation dashboard.</p>
+</div>
+</div>
+
+<div class="project-card">
+<img src="images/powerbi6.jpg">
+<div class="project-content">
+<h3>SAP Invoice Analytics Dashboard</h3>
+<p>SAP invoice and billing analytics solution.</p>
+</div>
+</div>
+
+<div class="project-card">
+<img src="images/powerbi7.jpg">
+<div class="project-content">
+<h3>Cash Flow Dashboard</h3>
+<p>Cash flow and financial reporting dashboard.</p>
+</div>
+</div>
+
+<div class="project-card">
+<img src="images/powerbi8.jpg">
+<div class="project-content">
+<h3>Freight Expense Dashboard</h3>
+<p>Freight invoice and expense reporting dashboard.</p>
+</div>
+</div>
+
+<div class="project-card">
+<img src="images/powerbi9.jpg">
+<div class="project-content">
+<h3>Financial KPI Dashboard</h3>
+<p>Financial KPI and reporting analytics dashboard.</p>
+</div>
+</div>
+
+<div class="project-card">
+<img src="images/powerbi10.jpg">
+<div class="project-content">
+<h3>Executive MIS Dashboard</h3>
+<p>Management reporting and operational insights.</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+   EXCEL PROJECTS
+=========================== -->
+
+<section id="excel">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Excel <span>Projects</span></h2>
+</div>
+
+<div class="projects-grid">
+
+<div class="project-card">
+<img src="images/excel1.jpg">
+<div class="project-content">
+<h3>Invoice Processing Tracker</h3>
+<p>Invoice tracking and processing workbook.</p>
+</div>
+</div>
+
+<div class="project-card">
+<img src="images/excel2.jpg">
+<div class="project-content">
+<h3>Vendor Payment Workbook</h3>
+<p>Vendor payment reconciliation workbook.</p>
+</div>
+</div>
+
+<div class="project-card">
+<img src="images/excel3.jpg">
+<div class="project-content">
+<h3>AR Aging Report</h3>
+<p>Accounts receivable aging analytics workbook.</p>
+</div>
+</div>
+
+<div class="project-card">
+<img src="images/excel4.jpg">
+<div class="project-content">
+<h3>Financial KPI Dashboard</h3>
+<p>Excel financial KPI reporting dashboard.</p>
+</div>
+</div>
+
+<div class="project-card">
+<img src="images/excel5.jpg">
+<div class="project-content">
+<h3>SAP Invoice Tracker</h3>
+<p>SAP invoice management and reporting workbook.</p>
+</div>
+</div>
+
+<div class="project-card">
+<img src="images/excel6.jpg">
+<div class="project-content">
+<h3>Cash Flow Workbook</h3>
+<p>Cash flow analysis and reporting workbook.</p>
+</div>
+</div>
+
+<div class="project-card">
+<img src="images/excel7.jpg">
+<div class="project-content">
+<h3>Expense Analysis Dashboard</h3>
+<p>Expense monitoring and analytics dashboard.</p>
+</div>
+</div>
+
+<div class="project-card">
+<img src="images/excel8.jpg">
+<div class="project-content">
+<h3>Audit Tracking Workbook</h3>
+<p>Audit management and reporting system.</p>
+</div>
+</div>
+
+<div class="project-card">
+<img src="images/excel9.jpg">
+<div class="project-content">
+<h3>Month-End Tracker</h3>
+<p>Month-end closing and reconciliation tracker.</p>
+</div>
+</div>
+
+<div class="project-card">
+<img src="images/excel10.jpg">
+<div class="project-content">
+<h3>Payment Status Dashboard</h3>
+<p>Vendor payment monitoring dashboard.</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+   STATS
+=========================== -->
+
+<section class="stats">
+
+<div class="container">
+
+<div class="stats-grid">
+
+<div class="stat-card">
+<h2 class="counter" data-target="10">0</h2>
+<p>Years Experience</p>
+</div>
+
+<div class="stat-card">
+<h2 class="counter" data-target="350">0</h2>
+<p>Reports</p>
+</div>
+
+<div class="stat-card">
+<h2 class="counter" data-target="60">0</h2>
+<p>Power BI Dashboards</p>
+</div>
+
+<div class="stat-card">
+<h2 class="counter" data-target="240">0</h2>
+<p>Excel Dashboards</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+   CONTACT
+=========================== -->
+
+<section id="contact">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Contact <span>Me</span></h2>
+</div>
+
+<div class="contact-grid">
+
+<div class="contact-info">
+
+<h3>Get In Touch</h3>
+
+<p><i class="fa-solid fa-phone"></i> 8121361459</p>
+
+<p><i class="fa-solid fa-envelope"></i> shruthi.sru09@gmail.com</p>
+
+<p><i class="fa-solid fa-location-dot"></i> Secunderabad, Telangana</p>
+
+<p><i class="fa-solid fa-language"></i> English, Hindi, Telugu</p>
+
+</div>
+
+<div class="contact-form">
+
+<form>
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Your Email">
+
+<textarea rows="6" placeholder="Your Message"></textarea>
+
+<button class="btn btn-primary">
+Send Message
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+   FOOTER
+=========================== -->
+
+<footer>
+
+<div class="container">
+
+<p>
+© 2026 Shruthi Portfolio | All Rights Reserved
+</p>
+
+</div>
+
+</footer>
+
+<!-- ===========================
+   JAVASCRIPT
+=========================== -->
+
+<script>
+
+/* COUNTER ANIMATION */
+
+const counters = document.querySelectorAll('.counter');
+
+counters.forEach(counter => {
+
+counter.innerText = '0';
+
+const updateCounter = () => {
+
+const target = +counter.getAttribute('data-target');
+
+const c = +counter.innerText;
+
+const increment = target / 100;
+
+if(c < target){
+
+counter.innerText = `${Math.ceil(c + increment)}`;
+
+setTimeout(updateCounter,20);
+
+}else{
+counter.innerText = target;
+}
+
+};
+
+updateCounter();
+
+});
+
+</script>
+
+</body>
+</html>
+
+
+
+
+         
+
+
+       
